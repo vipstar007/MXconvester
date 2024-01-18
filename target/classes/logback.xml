@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- ConsoleAppender- config này sẽ ghi message ra màn hình console dạng System.out.print -->
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+	  <encoder>
+	    <pattern>
+	      %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+	    </pattern>
+	  </encoder>
+	</appender>
+
+ 
+ 	<property name="LOG_PATH" value="napas-nrt.log" />
+
+	<!--  tách ghi file log thành nhiều file-->
+    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}</file>
+
+	  <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+	    <Pattern>
+	      %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+	    </Pattern>
+	  </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}.%d{yyyy-MM-dd}-%i.gz</fileNamePattern>
+          <!-- each file should be at most 50MB, keep 20 days worth of history, but at most 500MB -->
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>20</maxHistory>
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+    </appender>
+
+	<springProfile name="local">
+	    <root level="INFO">
+	        <appender-ref ref="Console" />
+	        <appender-ref ref="RollingFile" />
+	    </root>
+	</springProfile>
+	
+</configuration>

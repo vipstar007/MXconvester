@@ -1,0 +1,357 @@
+{
+  "Nrt": {
+    "checkURL": [
+      {
+        "validateContent": {
+          "code": 404,
+          "message": "NOT FOUND",
+          "validateKey": "KindOfMessage",
+          "values": [
+            "SINGLE",
+            "BATCH"
+          ]
+        }
+      },
+      {
+        "validateContent": {
+          "code": 502,
+          "message": "Lỗi sai định dạng URL",
+          "validateKey": "Service",
+          "values": [
+            "DirectCredit",
+            "DirectDebit ",
+            "Return",
+            "RequestToPay",
+            "FetchingExchangeRate",
+            "CancellationForDirectCredit",
+            "RequestToRefusalForDirectCredit",
+            "RegisterMandate",
+            "MandateCancellation",
+            "InquiryTransactionStatus",
+            "InvestigationTransaction",
+            "PaymentForCopy",
+            "InquiryMandateStatus",
+            "MandateCopy",
+            "BillInquiry",
+            "RequestAnAmendment",
+            "RequestForReturn",
+            "RequestToProvideTransactionInformation",
+            "SupportCollection",
+            "GoodFaith",
+            "ClarificationInformation",
+            "GetDebitCap",
+            "SetDebitCap",
+            "GetSettlementLimit",
+            "SetSettlementLimit",
+            "CustomerRegistration",
+            "CustomerRevocation",
+            "GetCustomerRecords",
+            "DeleteCustomerDataRecord",
+            "CustomerDataModification",
+            "CustomerStatusModification",
+            "CustomerAccountInquiry",
+            "ClearingReport",
+            "SettlementReport",
+            "ReconcilationReport",
+            "ListOfBillers",
+            "TextMessage",
+            "BusinessDayPeriod"
+          ]
+        }
+      },
+      {
+        "validateContent": {
+          "code": 500,
+          "message": "System Error - Can't put message to queue",
+          "validateKey": "MessageIdentifier",
+          "values": [
+            "camt.009.001.06",
+            "camt.010.001.07",
+            "camt.011.001.06",
+            "camt.018.001.04",
+            "camt.019.001.06",
+            "camt.025.001.04",
+            "camt.033.001.05",
+            "camt.052.001.07",
+            "camt.053.001.07",
+            "camt.056.001.07",
+            "camt.998.001.03.BILLERS.REQ",
+            "camt.998.001.03.BILLSREPORT",
+            "camt.998.001.03.DELETE.CUST.DATA.REC",
+            "camt.998.001.03.DISPUTE",
+            "camt.998.001.03.GET.CUSTOMER",
+            "camt.998.001.03.MDFY.CUST.STATUS",
+            "camt.998.001.03.MDFY.CUSTOMER",
+            "camt.998.001.03.RECONCILATION.REPORT",
+            "camt.998.001.03.RETURN.CUSTOMER",
+            "camt.998.001.03.REVOKE.REGISTRATION",
+            "camt.998.001.03.RGSTR.CUSTOMER",
+            "camt.998.001.03.TEXTMESSAGE",
+            "pacs.002.001.09",
+            "pacs.003.001.07",
+            "pacs.004.001.08",
+            "pacs.008.001.07",
+            "pacs.028.001.02",
+            "pain.001.001.08",
+            "pain.002.001.09",
+            "pain.009.001.05",
+            "pain.011.001.05",
+            "pain.012.001.05",
+            "pain.017.001.01",
+            "pain.998.001.01.MNDT.STATUS",
+            "pain.998.001.01.MNDT.STATUS.REQUEST",
+            "pain.998.MNDT.STATUS"
+          ]
+        }
+      },
+      {
+        "validateContent": {
+          "code": 500,
+          "message": "URL sai định dạng",
+          "validateKey": "FormatUrl",
+          "values": [
+            "SINGLE/DirectCredit/pacs.008.001.07",
+            "SINGLE/DirectDebit/pacs.003.001.07",
+            "SINGLE/Return/pacs.004.001.08",
+            "SINGLE/RequestToPay/pain.001.001.08",
+            "SINGLE/FetchingExchangeRate/",
+            "BATCH/DirectCredit/pacs.008.001.07",
+            "BATCH/DirectDebit/pacs.003.001.07",
+            "BATCH/Return/pacs.004.001.08",
+            "BATCH/RequestToPay/pain.001.001.08",
+            "BATCH/CancellationForDirectCredit/camt.056.001.07",
+            "BATCH/RequestToRefusalForDirectCredit/",
+            "SINGLE/RegisterMandate/pain.009.001.05",
+            "SINGLE/MandateCancellation/pain.011.001.05",
+            "SINGLE/InquiryTransactionStatus/pacs.028.001.02",
+            "SINGLE/InvestigationTransaction/pacs.028.001.02",
+            "SINGLE/PaymentForCopy/camt.033.001.05",
+            "SINGLE/InquiryMandateStatus/pain.998.001.01.MNDT.STATUS.REQUEST",
+            "SINGLE/MandateCopy/pain.017.001.01",
+            "SINGLE/BillInquiry/camt.998.001.03.BILLERS.REQ",
+            "SINGLE/RequestAnAmendment/camt.998.001.03.DISPUTE",
+            "SINGLE/RequestForReturn/camt.998.001.03.DISPUTE",
+            "SINGLE/RequestToProvideTransactionInformation/camt.998.001.03.DISPUTE",
+            "SINGLE/SupportCollection/camt.998.001.03.DISPUTE",
+            "SINGLE/GoodFaith/camt.998.001.03.DISPUTE",
+            "SINGLE/ClarificationInformation/camt.998.001.03.DISPUTE",
+            "SINGLE/GetDebitCap/camt.009.001.06",
+            "SINGLE/SetDebitCap/camt.011.001.06",
+            "SINGLE/GetSettlementLimit/camt.009.001.06",
+            "SINGLE/SetSettlementLimit/camt.011.001.06",
+            "SINGLE/CustomerRegistration/camt.998.001.03.RGSTR.CUSTOMER",
+            "SINGLE/CustomerRevocation/camt.998.001.03.REVOKE.REGISTRATION",
+            "SINGLE/GetCustomerRecords/camt.998.001.03.GET.CUSTOMER",
+            "SINGLE/DeleteCustomerDataRecord/camt.998.001.03.DELETE.CUST.DATA.REC",
+            "SINGLE/CustomerDataModification/camt.998.001.03.MDFY.CUSTOMER",
+            "SINGLE/CustomerStatusModification/camt.998.001.03.MDFY.CUST.STATUS",
+            "SINGLE/CustomerAccountInquiry/",
+            "BATCH/ClearingReport/camt.052.001.07",
+            "BATCH/SettlementReport/camt.053.001.07",
+            "BATCH/ReconcilationReport/camt.998.001.03.RECONCILATION.REPORT",
+            "BATCH/ListOfBillers/camt.998.001.03.BILLERS.REQ",
+            "SINGLE/TextMessage/camt.998.001.03.TEXTMESSAGE",
+            "SINGLE/BusinessDayPeriod/camt.018.001.04",
+            "SINGLE/DirectCredit/pacs.002.001.09",
+            "SINGLE/DirectDebit/pacs.002.001.09",
+            "SINGLE/Return/pacs.002.001.09",
+            "SINGLE/RequestToPay/pain.002.001.09",
+            "SINGLE/FetchingExchangeRate/",
+            "BATCH/DirectCredit/pacs.002.001.09",
+            "BATCH/DirectDebit/pacs.002.001.09",
+            "BATCH/Return/pacs.002.001.09",
+            "BATCH/RequestToPay/pain.002.001.09",
+            "BATCH/CancellationForDirectCredit/",
+            "BATCH/RequestToRefusalForDirectCredit/",
+            "SINGLE/RegisterMandate/pain.012.001.05",
+            "SINGLE/MandateCancellation/pain.998.MNDT.STATUS",
+            "SINGLE/InquiryTransactionStatus/pacs.002.001.09",
+            "SINGLE/InvestigationTransaction/pacs.002.001.09",
+            "SINGLE/PaymentForCopy/",
+            "SINGLE/InquiryMandateStatus/pain.998.001.01.MNDT.STATUS",
+            "SINGLE/MandateCopy/pain.012.001.05",
+            "SINGLE/BillInquiry/camt.998.001.03.BILLSREPORT",
+            "SINGLE/RequestAnAmendment/camt.998.001.03.DISPUTE",
+            "SINGLE/RequestForReturn/camt.998.001.03.DISPUTE",
+            "SINGLE/RequestToProvideTransactionInformation/camt.998.001.03.DISPUTE",
+            "SINGLE/SupportCollection/camt.998.001.03.DISPUTE",
+            "SINGLE/GoodFaith/camt.998.001.03.DISPUTE",
+            "SINGLE/ClarificationInformation/camt.998.001.03.DISPUTE",
+            "SINGLE/GetDebitCap/camt.010.001.07",
+            "SINGLE/SetDebitCap/camt.010.001.07",
+            "SINGLE/GetSettlementLimit/camt.010.001.07",
+            "SINGLE/SetSettlementLimit/camt.010.001.07",
+            "SINGLE/CustomerRegistration/camt.025.001.04",
+            "SINGLE/CustomerRevocation/camt.025.001.04",
+            "SINGLE/GetCustomerRecords/camt.998.001.03.RETURN.CUSTOMER",
+            "SINGLE/DeleteCustomerDataRecord/camt.025.001.04",
+            "SINGLE/CustomerDataModification/camt.025.001.04",
+            "SINGLE/CustomerStatusModification/camt.025.001.04",
+            "SINGLE/CustomerAccountInquiry/",
+            "BATCH/ClearingReport/",
+            "BATCH/SettlementReport/",
+            "BATCH/ReconcilationReport/",
+            "BATCH/ListOfBillers/camt.998.001.03.BILLSREPORT",
+            "SINGLE/TextMessage/",
+            "SINGLE/BusinessDayPeriod/camt.019.001.06"
+          ]
+        }
+      }
+    ],
+    "checkData": {
+      "mxConverter": {
+        "code": 502,
+        "message": "Wrong message NRT format",
+        "validateComment": "Not null",
+        "Header": {
+          "validateKey": [
+            "SenderReference",
+            "MessageIdentifier",
+            "Format",
+            "Sender/ID",
+            "Receiver/ID",
+            "Timestamp",
+            "Signature"
+          ]
+        }
+      }
+    },
+    "checkSignature":{
+      "mxConverter": {
+        "code": 502,
+        "message": "Validation Signature Error",
+        "validateComment": "Call api to HSM"
+      }
+    },
+
+    "mxConfig": [
+      {
+      "configKey": "cfg01",
+      "active": true
+      },
+      {
+        "configKey": "cfg02",
+        "active": true
+      },{
+        "configKey": "cfg03",
+        "active": true
+      },{
+        "configKey": "cfg04",
+        "active": true
+      },{
+        "configKey": "cfg05",
+        "active": true
+      },{
+        "configKey": "cfg06",
+        "active": true
+      },{
+        "configKey": "cfg07",
+        "active": true
+      }
+    ]
+    ,
+    "dataList":{
+      "bicParticipant":[
+        "BFTVVNVN",
+        "BVBVVNVN",
+        "EBVIVNVN",
+        "BIDVVNVN",
+        "SHBAVNVN",
+        "MSBVVNVN",
+        "MBBVVNVN"
+
+      ],
+      "binClear": [
+        "970436",
+        "970438",
+        "970431",
+        "970418",
+        "970443",
+        "970426",
+        "970422"
+      ],
+      "binFake": [
+        "970436",
+        "970438",
+        "970431",
+        "970418",
+        "970443",
+        "970426",
+        "970422"
+      ],
+      "shortNameParticipant": [
+        "VCB",
+        "BVB",
+        "EIB",
+        "BIDV",
+        "SHB",
+        "MSB",
+        "MB"
+      ],
+      "bicACH": [
+        "BFTVVNVN",
+        "BVBVVNVN",
+        "EBVIVNVN",
+        "BIDVVNVN",
+        "SHBAVNVN",
+        "MSBVVNVN",
+        "MBBVVNVN"
+      ],
+      "bicIBFT": [
+        "BFTVVNVP",
+        "BVBVVNVP",
+        "EBVIVNVP",
+        "BIDVVNVP",
+        "SHBAVNVP",
+        "MSBVVNVP",
+        "MBBVVNVP"
+      ],
+      "senderACH": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "senderIBFT": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "receiverACH": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "receiverIBFT": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ]
+    },"messageIdentifier-Sender": [
+      "pacs.008.001.07",
+      "pacs.003.001.07",
+      "pacs.004.001.08",
+      "pain.001.001.08",
+      "pacs.008.001.07",
+      "pacs.003.001.07"
+    ]
+  },
+  "Das": {
+
+  }
+}
