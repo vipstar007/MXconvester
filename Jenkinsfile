@@ -13,7 +13,7 @@ pipeline{
          }
         stage('Packaging/Pushing imagae'){
             step{
-                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/'){
+                withDockerRegistry(credentialsId: 'my-docker', url: 'https://index.docker.io/v1/'){
                     sh 'docker build -t skynight007/mxConvester .'
                     sh 'docker push skynight007/mxConvester'
 
